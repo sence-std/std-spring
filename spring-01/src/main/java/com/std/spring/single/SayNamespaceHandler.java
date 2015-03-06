@@ -9,6 +9,7 @@
  */
 package com.std.spring.single;
 
+import com.std.spring.multiple.TalkBeanDefinitionParser;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 
 /**
@@ -30,5 +31,6 @@ public class SayNamespaceHandler extends NamespaceHandlerSupport {
 	@Override
 	public void init () {
 		registerBeanDefinitionParser("say", new SayBeanDefinitionParser());
+		registerBeanDefinitionParser("talk",new TalkBeanDefinitionParser());
 	}
 }

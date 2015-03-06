@@ -8,15 +8,28 @@
 
         <xsd:import namespace="http://www.springframework.org/schema/beans" />
 
-        <xsd:element name="say">
-            <xsd:complexType>
-                <xsd:complexContent>
-                    <xsd:extension base="beans:identifiedType">
-                        <xsd:attribute name="name" type="xsd:string" use="required"/>
-                        <xsd:attribute name="word" type="xsd:string"/>
-                    </xsd:extension>
-                </xsd:complexContent>
-            </xsd:complexType>
+        <xsd:complexType name="sayType">
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="name" type="xsd:string" use="required"/>
+                    <xsd:attribute name="word" type="xsd:string"/>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+
+        <xsd:element name="say" type="sayType">
+        </xsd:element>
+
+        <xsd:complexType name="talkType">
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="say" />
+                <xsd:element ref="talk" />
+            </xsd:choice>
+            <xsd:attribute name="id" type="xsd:ID"/>
+            <xsd:attribute name="name" use="required" type="xsd:string" />
+        </xsd:complexType>
+
+        <xsd:element name="talk" type="talkType">
         </xsd:element>
 
 </xsd:schema>

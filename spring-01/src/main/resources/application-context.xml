@@ -6,5 +6,32 @@
        http://std.org/schema/std http://std.org/schema/std/std-custom.xsd">
     
     <std:say id="sayHello" name="sence"/>
+    
+    <std:talk id="talk" name="talkName">
+        <std:say name="sence" word="how are you" />
+        <std:say name="tracy" word="i am fine" />
+        <std:talk name="talk-1">
+            <std:say name="lina" word="heihei" />
+            <std:say name="lucy" word="who..." />
+            <std:talk name="talk-2">
+                <std:say name="lina" word="heihei" />
+                <std:say name="lucy" word="who..." />
+                <std:talk name="talk-3">
+                    <std:say name="lina" word="heihei" />
+                    <std:say name="lucy" word="who..." />
+                </std:talk>
+            </std:talk>
+            <std:talk name="talk-4">
+                <std:say name="lina" word="heihei" />
+                <std:say name="lucy" word="who..." />
+                <std:talk name="talk-5">
+                    <std:say name="lina" word="heihei" />
+                    <std:say name="lucy" word="who..." />
+                </std:talk>
+            </std:talk>
+        </std:talk>
+    </std:talk>
+
+
 
 </beans>
