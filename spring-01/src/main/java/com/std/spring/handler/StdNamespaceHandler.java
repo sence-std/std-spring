@@ -7,9 +7,10 @@
  *
  * Copyright 2011-2015 Asura
  */
-package com.std.spring.single;
+package com.std.spring.handler;
 
 import com.std.spring.multiple.TalkBeanDefinitionParser;
+import com.std.spring.single.SayBeanDefinitionParser;
 import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
 
 /**
@@ -26,7 +27,7 @@ import org.springframework.beans.factory.xml.NamespaceHandlerSupport;
  * @since 1.0
  * @version 1.0
  */
-public class SayNamespaceHandler extends NamespaceHandlerSupport {
+public class StdNamespaceHandler extends NamespaceHandlerSupport {
 
 	@Override
 	public void init () {
